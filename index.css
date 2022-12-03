@@ -1,0 +1,88 @@
+:root {
+    --boardColor:#c6c6c6;
+}
+* {
+    font-family: 'Fjalla One', sans-serif;
+}
+body {
+    overflow:hidden;
+}
+.gamegrid {
+    display:grid;
+    grid-template-columns:auto auto auto auto auto auto auto auto auto auto;
+    width:95vh;
+    height:95vh;
+    margin:auto;
+}
+.square {
+    width:9.5vh;
+    height:9.5vh;
+    font-size:7vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--boardColor);
+    color:#737373;
+}
+.square:hover {
+    cursor:pointer;
+    filter:brightness(50%) !important;
+}
+/*.mine {
+    background:red;
+}*/
+#a0, #a2, #a4, #a6, #a8, #b1, #b3, #b5, #b7, #b9, #c0, #c2, #c4, #c6, #c8, #d1, #d3, #d5, #d7, #d9, #e0, #e2, #e4, #e6, #e8, #f1, #f3, #f5, #f7, #f9, #g0, #g2, #g4, #g6, #g8, #h1, #h3, #h5, #h7, #h9, #i0, #i2, #i4, #i6, #i8, #j1, #j3, #j5, #j7, #j9 {
+    filter:brightness(75%);
+}
+#settingsButton {
+    position:absolute;
+    top:1vh;
+    right:1vh;
+    transition:1s;
+}
+#settingsButton:hover {
+    transition:1s;
+    rotate:180deg;
+    cursor:pointer;
+}
+.begGlow {
+    animation:glowy 2s infinite ease-in-out;
+    z-index:2;
+}
+@keyframes glowy {
+    0% {background:var(--boardColor); box-shadow:0px 0px 200px black}
+    45% {background:#ffffff}
+    100% {background:var(--boardColor); box-shadow:0px 0px 200px black}
+}
+#flagCount {
+    position:absolute;
+    top:1vh;
+    left:1vh;
+    display:inline;
+    font-size:35px;
+}
+#settingsMenu {
+    width:95vh;
+    height:95vh;
+    border:5px solid black;
+    margin:auto;
+    display:none;
+    border-radius:5px;
+    background:#d6d6d6;
+    grid-template-columns:auto;
+    justify-content:center;
+    justify-items:center;
+}
+#desc {
+    width:85vh;
+    font-size:30px;
+}
+button {
+    width:25vh;
+    height:10vh;
+    font-size:5vh;
+}
+#boardColor {
+    width:25vh;
+    height:25vh;
+}

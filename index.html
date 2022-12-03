@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28d4a90981.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="gamegrid">
+        <div class="row">
+            <div class="square" id="a0" onclick="numDisplay(0,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a1" onclick="numDisplay(0,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a2" onclick="numDisplay(0,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a3" onclick="numDisplay(0,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a4" onclick="numDisplay(0,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a5" onclick="numDisplay(0,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a6" onclick="numDisplay(0,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a7" onclick="numDisplay(0,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a8" onclick="numDisplay(0,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="a9" onclick="numDisplay(0,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="b0" onclick="numDisplay(1,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b1" onclick="numDisplay(1,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b2" onclick="numDisplay(1,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b3" onclick="numDisplay(1,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b4" onclick="numDisplay(1,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b5" onclick="numDisplay(1,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b6" onclick="numDisplay(1,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b7" onclick="numDisplay(1,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b8" onclick="numDisplay(1,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="b9" onclick="numDisplay(1,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="c0" onclick="numDisplay(2,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c1" onclick="numDisplay(2,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c2" onclick="numDisplay(2,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c3" onclick="numDisplay(2,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c4" onclick="numDisplay(2,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c5" onclick="numDisplay(2,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c6" onclick="numDisplay(2,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c7" onclick="numDisplay(2,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c8" onclick="numDisplay(2,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="c9" onclick="numDisplay(2,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="d0" onclick="numDisplay(3,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d1" onclick="numDisplay(3,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d2" onclick="numDisplay(3,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d3" onclick="numDisplay(3,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d4" onclick="numDisplay(3,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d5" onclick="numDisplay(3,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d6" onclick="numDisplay(3,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d7" onclick="numDisplay(3,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d8" onclick="numDisplay(3,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="d9" onclick="numDisplay(3,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="e0" onclick="numDisplay(4,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e1" onclick="numDisplay(4,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e2" onclick="numDisplay(4,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e3" onclick="numDisplay(4,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square begGlow" id="e4" onclick="numDisplay(4,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square begGlow" id="e5" onclick="numDisplay(4,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e6" onclick="numDisplay(4,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e7" onclick="numDisplay(4,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e8" onclick="numDisplay(4,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="e9" onclick="numDisplay(4,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="f0" onclick="numDisplay(5,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f1" onclick="numDisplay(5,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f2" onclick="numDisplay(5,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f3" onclick="numDisplay(5,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square begGlow" id="f4" onclick="numDisplay(5,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square begGlow" id="f5" onclick="numDisplay(5,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f6" onclick="numDisplay(5,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f7" onclick="numDisplay(5,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f8" onclick="numDisplay(5,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="f9" onclick="numDisplay(5,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="g0" onclick="numDisplay(6,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g1" onclick="numDisplay(6,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g2" onclick="numDisplay(6,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g3" onclick="numDisplay(6,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g4" onclick="numDisplay(6,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g5" onclick="numDisplay(6,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g6" onclick="numDisplay(6,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g7" onclick="numDisplay(6,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g8" onclick="numDisplay(6,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="g9" onclick="numDisplay(6,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="h0" onclick="numDisplay(7,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h1" onclick="numDisplay(7,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h2" onclick="numDisplay(7,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h3" onclick="numDisplay(7,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h4" onclick="numDisplay(7,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h5" onclick="numDisplay(7,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h6" onclick="numDisplay(7,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h7" onclick="numDisplay(7,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h8" onclick="numDisplay(7,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="h9" onclick="numDisplay(7,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="i0" onclick="numDisplay(8,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i1" onclick="numDisplay(8,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i2" onclick="numDisplay(8,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i3" onclick="numDisplay(8,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i4" onclick="numDisplay(8,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i5" onclick="numDisplay(8,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i6" onclick="numDisplay(8,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i7" onclick="numDisplay(8,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i8" onclick="numDisplay(8,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="i9" onclick="numDisplay(8,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="j0" onclick="numDisplay(9,0)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j1" onclick="numDisplay(9,1)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j2" onclick="numDisplay(9,2)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j3" onclick="numDisplay(9,3)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j4" onclick="numDisplay(9,4)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j5" onclick="numDisplay(9,5)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j6" onclick="numDisplay(9,6)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j7" onclick="numDisplay(9,7)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j8" onclick="numDisplay(9,8)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+            <div class="square" id="j9" onclick="numDisplay(9,9)" oncontextmenu="func(this.id)" contextmenu="a"></div>
+        </div>
+    </div>
+    <i class="fa-solid fa-gear fa-3x" id="settingsButton" onclick="openSettings()"></i>
+    <div id="flagCount">
+        <i class="fa-solid fa-flag" id="flags"> x20</i>
+    </div>
+    <div id="settingsMenu">
+        <p id="desc">Welcome to Minesweeper! To start, click one of the four glowing boxes in the middle. Each number will tell you how many mines are in a one tile distance from it (including diagonals). Your goal is to place all 20 flags using right-click on top of the mines to win. Good Luck!</p>
+        <button id="reset" onclick="location.reload()">Reset</button>
+        <input type="color" id="boardColor" value="#c6c6c6" onchange="document.querySelector(':root').style.setProperty('--boardColor',document.getElementById('boardColor').value)">;
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
