@@ -145,16 +145,18 @@ let flagCount = 20;
 function func(t) {
     if (gameOver == false) {
         if (document.getElementById(t).innerHTML == '') {
-            document.getElementById(t).style.color = "red !important";
-            document.getElementById(t).innerHTML = '<i class="fa-solid fa-flag"></i>';
-            flagCount--;
+            if (flagCount != 0) {
+                document.getElementById(t).style.color = "red !important";
+                document.getElementById(t).innerHTML = '<i class="fa-solid fa-flag"></i>';
+                flagCount--;
+            }
         } else if (document.getElementById(t).innerHTML == '<i class="fa-solid fa-flag"></i>') {
             document.getElementById(t).innerHTML = '';
             document.getElementById(t).style.color = "#737373";
             flagCount++;
         }
         document.getElementById("flags").innerHTML = " x" + flagCount;
-        if (document.getElementsByTagName("i").length == 20) {
+        if (flagCount == 0) {
             for (let u = 0; u != 20; u++) {
                 if (document.getElementsByClassName("square mine")[u].innerHTML == '<i class="fa-solid fa-flag"></i>') {
                     correctFlag++;
