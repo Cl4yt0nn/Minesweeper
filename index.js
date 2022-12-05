@@ -194,3 +194,18 @@ addEventListener('click',(event)=>{
         classCleared = true;
     }
 });
+
+let hoveredId = undefined;
+addEventListener('mousemove',(event)=>{
+    let h = document.elementFromPoint(event.clientX,event.clientY);
+    if (h.className == "fa-solid fa-flag") {
+        hoveredId = h.parentElement.id;
+    } else {
+        hoveredId = h.id;
+    }
+});
+addEventListener('keydown',(event)=>{
+    if (event.key == "F" || event.key == "f") {
+        func(hoveredId);
+    }
+});
